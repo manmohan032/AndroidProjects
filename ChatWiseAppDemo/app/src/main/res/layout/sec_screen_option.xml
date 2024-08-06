@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/productToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarStyle"
+        app:title="Product"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+        android:padding="16dp">
+    <!-- Product Thumbnail -->
+    <ImageView
+        android:id="@+id/product_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        />
+
+    <!-- Product Title -->
+    <TextView
+        android:id="@+id/product_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:text="Product Title" />
+
+    <!-- Product Price -->
+    <TextView
+        android:id="@+id/product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#cc0000"
+        android:layout_marginTop="8dp"
+        android:text="$99.99" />
+
+    <!-- Product Rating -->
+    <TextView
+        android:id="@+id/product_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#00ff00"
+        android:layout_marginTop="4dp"
+        android:text="Rating: 4.5/5" />
+
+    <!-- Product Description -->
+    <TextView
+        android:id="@+id/product_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        android:text="This is a detailed description of the product. It covers features, benefits, and other important information." />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I can add more options to show if needed in screen"
+            android:layout_weight="1"/>
+
+    <!-- Add other details such as warranty, return policy, etc., if needed -->
+    </LinearLayout>
+</LinearLayout>

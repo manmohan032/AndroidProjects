@@ -2,6 +2,8 @@ package com.example.todo;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.ItemTouchHelper;
@@ -58,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements OnDialogCloseList
         taskList=obSQL.getAlTask();
         Collections.reverse(taskList);
         adapter = new TaskAdapter(taskList,obSQL,this);
-
+        fab.setImageTintList(ColorStateList.valueOf(Color.WHITE));
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
